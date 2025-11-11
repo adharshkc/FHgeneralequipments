@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "./About.css";
+import WhyChooseUs from "../../components/WhyChooseUs";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("story");
@@ -73,6 +74,9 @@ export default function About() {
           </Col>
         </Row>
       </Container>
+      
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
     </Container>
   );
 }

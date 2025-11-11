@@ -23,7 +23,7 @@ export default function AboutSection() {
           md={6}
           className="bg-dark text-light d-flex flex-column justify-content-center px-5"
         >
-          <h2 className=" mb-4 mt-5 ">
+          <h2 className=" mb-4 mt-5  about-title">
             About <span className="text-success">FH</span>
             <br />
             General Equipment
