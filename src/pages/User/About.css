@@ -1,0 +1,40 @@
+.about-section {
+  background-color: #fff;
+}
+
+.tabs {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+  color: #000;
+}
+
+.tab:hover {
+  color: #007bff;
+}
+
+.tab.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.about-text {
+  white-space: pre-line;
+  color: #555;
+  line-height: 1.8;
+}
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

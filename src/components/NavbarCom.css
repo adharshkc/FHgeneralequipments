@@ -1,0 +1,158 @@
+/* Navbar container */
+.custom-navbar {
+  background-color: #ffffff;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+  width: 180px;
+  height: auto;
+}
+
+/* Center nav links */
+.custom-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links default */
+.custom-nav-links a {
+  color: #000000;
+  font-family: "Europa Regular", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.custom-nav-links a:hover {
+  color: #2ea898;
+  font-family: "Europa Bold", sans-serif;
+}
+
+/* Active link */
+.custom-nav-links a.active {
+  color: #2ea898 !important;
+  font-family: "Europa Bold", sans-serif;
+  border-bottom: 2px solid #2ea898;
+  padding-bottom: 3px;
+}
+
+/* Material UI Button */
+.mui-btn {
+  background-color: #2ea898 !important;
+  color: #fff !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  padding: 6px 18px !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.mui-btn:hover {
+  background-color: #249986 !important;
+}
+
+/* Toggle icon */
+.toggle-btn {
+  border: none;
+  box-shadow: none !important;
+}
+
+/* ========== MOBILE VIEW ========== */
+@media (max-width: 991px) {
+  /* Fullscreen overlay when menu opens */
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 9999;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  /* Show animation when open */
+  .navbar-collapse.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Nav links stacked vertically */
+  .custom-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: auto;
+    padding-left: 20px; /* ✅ aligns with button */
+  }
+
+  .custom-nav-links a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .custom-nav-links a:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* ✅ Button perfectly aligned at bottom-left */
+  .mui-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* aligns exactly with links */
+    font-size: 16px !important;
+    border-radius: 8px !important;
+    z-index: 10000;
+    width: auto;
+    min-width: 120px;
+    text-align: left !important;
+  }
+
+  /* Slight animation for button appearance */
+  .navbar-collapse.show .mui-btn {
+    animation: slideUp 0.3s ease forwards;
+  }
+
+  /* Animation keyframes */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

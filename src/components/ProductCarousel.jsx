@@ -1,0 +1,96 @@
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
+import { Container } from "react-bootstrap";
+import "./ProductCarousel.css";
+import "../App.css";
+import { useNavigate } from "react-router-dom";
+
+export default function ProductCarousel() {
+  const navigate = useNavigate();
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    responsive: [
+      { breakpoint: 1200, settings: { slidesToShow: 4 } },
+      { breakpoint: 992, settings: { slidesToShow: 4 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          swipeToSlide: true,
+        },
+      },
+    ],
+  };
+
+  // ✅ Fetch categories from backend
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/api/category/userview");
+
+        if (res.data.success) {
+          setCategories(res.data.categories);
+          console.log("✅ Categories Loaded:", res.data.categories);
+        }
+      } catch (error) {
+        console.error("❌ Error loading categories:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  return (
+    <Container className="product-carousel-container text-center my-4">
+      <h2 className="mb-4 fw-bold">Categories</h2>
+
+      {loading ? (
+        <p>Loading categories...</p>
+      ) : categories.length > 0 ? (
+        <Slider {...settings}>
+          {categories.map((cat) => (
+            <div
+              key={cat._id}
+              className="product-card"
+              onClick={() =>
+                navigate("/product", { state: { category: cat.category_name } })
+              }
+              style={{ cursor: "pointer" }}
+            >
+              <div className="image-wrapper">
+                <img
+                  src={
+                    cat.category_image
+                      ? `http://localhost:5000/${cat.category_image}`
+                      : "/images/no-image.jpg"
+                  }
+                  alt={cat.category_name}
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="product-title">{cat.category_name}</h3>
+            </div>
+          ))}
+        </Slider>
+      ) : (
+        <p>No categories found.</p>
+      )}
+    </Container>
+  );
+}

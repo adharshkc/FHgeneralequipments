@@ -1,22 +1,47 @@
 {
+  "homepage": "https://blueweb2.github.io/FHgenralequipments",
   "name": "general-equipment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.4",
+    "@mui/material": "^7.3.4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.13.1",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "dotenv": "^17.2.3",
+    "easymde": "^2.20.0",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.552.0",
+    "quill": "^2.0.3",
     "react": "^19.2.0",
+    "react-bootstrap": "^2.10.10",
+    "react-bootstrap-icons": "^1.11.6",
     "react-dom": "^19.2.0",
-    "react-scripts": "5.0.1",
+    "react-feather": "^2.0.10",
+    "react-hook-form": "^7.66.0",
+    "react-icons": "^5.5.0",
+    "react-quill": "^2.0.0-beta.4",
+    "react-router-dom": "^7.9.5",
+    "react-simplemde-editor": "^5.2.0",
+    "react-slick": "^0.31.0",
+    "react-toastify": "^11.0.5",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +60,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "vite": "^7.2.1"
+  },
+  "proxy": "http://localhost:5000"
 }

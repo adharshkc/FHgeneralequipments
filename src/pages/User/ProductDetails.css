@@ -1,0 +1,7 @@
+/* 🌿 Custom placeholder styling */
+.form-control::placeholder {
+  font-size: 0.8rem;   /* Change placeholder font size */
+  color: #aeb1b4;      /* Optional: slightly gray placeholder text */
+  opacity: 1;          /* Ensure color applies consistently */
+ 
+}
