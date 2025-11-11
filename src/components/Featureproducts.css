@@ -22,7 +22,7 @@
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(202, 202, 202, 0.15);
 }
 
 /* Image wrapper */
@@ -33,7 +33,7 @@
   align-items: center;
   padding: 20px;
   border-radius: 8px;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
 }
 
 .feature-image-wrapper img {
