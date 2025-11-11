@@ -31,17 +31,17 @@ const LatestNews = () => {
         {/* Section Header */}
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
           <div>
-            <h2 className="fw-bold mb-2">Latest News</h2>
+            <h2 className="fw-bold mb-2">Blogs</h2>
             <p className="text-muted mb-0">
               Discover our Feature products designed to fuel your fitness journey.
             </p>
           </div>
-          <Button
+          {/* <Button
             variant="dark"
             className="mt-3 mt-md-0 px-4 py-2 fw-semibold rounded-3"
           >
             VIEW ALL ARTICLES
-          </Button>
+          </Button> */}
         </div>
 
         {/* News Cards */}

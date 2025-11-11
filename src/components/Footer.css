@@ -9,3 +9,23 @@ footer {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* Footer Copyright Section */
+.footer-copyright-section {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-dev-link {
+  color: white;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.footer-dev-link:hover {
+  text-decoration: underline;
+  color: white;
+}

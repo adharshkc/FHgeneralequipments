@@ -61,22 +61,22 @@ export default function Contact() {
               </p>
 
               <Form>
-                <Form.Group className="mb-3 d-flex align-items-center">
-                  <User className="me-2 text-muted" />
-                  <Form.Control type="text" placeholder="Your Name" />
+                <Form.Group className="mb-3 position-relative">
+                  <User className="position-absolute text-muted" style={{ left: '12px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }} size={20} />
+                  <Form.Control type="text" placeholder="Your Name" style={{ paddingLeft: '40px' }} />
                 </Form.Group>
 
-                <Form.Group className="mb-3 d-flex align-items-center">
-                  <Mail className="me-2 text-muted border-1" />
-                  <Form.Control type="email" placeholder="Email Address" required />
+                <Form.Group className="mb-3 position-relative">
+                  <Mail className="position-absolute text-muted" style={{ left: '12px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }} size={20} />
+                  <Form.Control type="email" placeholder="Email Address" required style={{ paddingLeft: '40px' }} />
                 </Form.Group>
 
-                <Form.Group className="mb-3 d-flex align-items-center">
-                  <Phone className="me-2 text-muted" />
-                  <Form.Control type="text" placeholder="Phone Number" />
+                <Form.Group className="mb-3 position-relative">
+                  <Phone className="position-absolute text-muted" style={{ left: '12px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }} size={20} />
+                  <Form.Control type="text" placeholder="Phone Number" style={{ paddingLeft: '40px' }} />
                 </Form.Group>
 
-                <Form.Group className="mb-3 border-4">
+                <Form.Group className="mb-3">
                   <Form.Control
                     as="textarea"
                     rows={4}

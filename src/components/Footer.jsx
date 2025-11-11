@@ -108,72 +108,29 @@ export default function Footer() {
             </Button>
           </Col>
         </Row>
-
-        {/* <hr /> */}
-        {/* <Row
-          className="py-2 m-0 w-100"
-          style={{
-            backgroundColor: "#6c757d",
-            color: "white",
-            fontSize: "0.9rem",
-            marginLeft: 0,
-            marginRight: 0,
-            marginBottom: 0,
-          }}
-        >
-          <Col md={6} className="text-center text-md-start">
-            © {new Date().getFullYear()} FH General Equipment. All Rights
-            Reserved.
-          </Col>
-          <Col md={6} className="text-center text-md-end">
-            Designed and developed by{" "}
-            <a
-              href="https://blueweb2.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "white", textDecoration: "none" }}
-              onMouseEnter={(e) =>
-                (e.target.style.textDecoration = "underline")
-              }
-              onMouseLeave={(e) => (e.target.style.textDecoration = "none")}
-            >
-              Blueweb2.com
-            </a>
-          </Col>
-        </Row> */}
       </Container>
-      <div fluid className="m-0 p-0 mb-0">
-        <Row
-          className="py-2 m-0 w-100"
-          style={{
-            backgroundColor: "#777777",
-            color: "white",
-            fontSize: "0.9rem",
-            marginLeft: 0,
-            marginRight: 0,
-            marginBottom: 0,
-          }}
-        >
-          <Col md={6} className="text-center text-md-start">
-            © {new Date().getFullYear()} FH General Equipment. All Rights
-            Reserved.
-          </Col>
-          <Col md={6} className="text-center text-md-end">
-            Designed and developed by{" "}
-            <a
-              href="https://blueweb2.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "white", textDecoration: "none" }}
-              onMouseEnter={(e) =>
-                (e.target.style.textDecoration = "underline")
-              }
-              onMouseLeave={(e) => (e.target.style.textDecoration = "none")}
-            >
-              Blueweb2.com
-            </a>
-          </Col>
-        </Row>
+
+      {/* Copyright Section */}
+      <div className="footer-copyright-section">
+        <Container>
+          <Row className="py-3">
+            <Col md={6} className="text-center text-md-start">
+              © {new Date().getFullYear()} FH General Equipment. All Rights
+              Reserved.
+            </Col>
+            <Col md={6} className="text-center text-md-end">
+              Designed and developed by{" "}
+              <a
+                href="https://blueweb2.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-dev-link"
+              >
+                Blueweb2.com
+              </a>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </footer>
   );

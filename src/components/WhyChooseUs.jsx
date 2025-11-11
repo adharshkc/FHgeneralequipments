@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
   return (
     <section className="why-choose-section py-5">
       <Container>
-        <h2 className="text-center mb-5 fw-semibold why-choose-title">
+        <h2 className="mb-5 fw-semibold why-choose-title">
           Why Choose Us
         </h2>
 

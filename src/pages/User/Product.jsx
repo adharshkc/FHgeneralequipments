@@ -38,6 +38,7 @@ export default function Product() {
   useEffect(() => {
     if (location.state?.category) {
       setSelectedCategory(location.state.category);
+      console.log("location.state.category",location.state.category)
     } else {
       setSelectedCategory(null);
     }
@@ -108,7 +109,7 @@ export default function Product() {
           sx={{ mb: 3 }}
         >
           {/* 🏷️ Left: Heading with Category Name */}
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid  size={{ xs: 12, sm: 6, md: 4 }}>
             <Box display="flex" alignItems="center" gap={1}>
               <Typography
                 variant="h5"
@@ -143,7 +144,7 @@ export default function Product() {
           </Grid>
 
           {/* 🔎 Right: Search Box */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid  size={{ xs: 12, sm: 6, md: 4 }}>
             <TextField
               className="search-products"
               fullWidth

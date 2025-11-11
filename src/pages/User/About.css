@@ -19,18 +19,23 @@
 }
 
 .tab:hover {
-  color: #007bff;
+  color: #2ea898;
 }
 
 .tab.active {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  color: #2ea898;
+  border-bottom: 2px solid #2ea898;
 }
 
 .about-text {
   white-space: pre-line;
   color: #555;
   line-height: 1.8;
+}
+
+/* About section heading left alignment */
+.about-section h3 {
+  text-align: left;
 }
 .about-image {
   max-width: 100%;
